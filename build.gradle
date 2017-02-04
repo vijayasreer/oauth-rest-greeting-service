@@ -1,0 +1,26 @@
+version '1.0'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+    testCompile 'org.codehaus.groovy:groovy:2.4.7'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4-rc-3'
+
+    testCompile 'org.apache.commons:commons-lang3:3.3.2'
+    testCompile 'org.mock-server:mockserver-netty:3.9.15'
+    testCompile 'javax.jms:javax.jms-api:2.0.1'
+}
+
+//test {
+//    onlyIf {
+//        project.hasProperty("funtionalTests")
+//    }
+//}
